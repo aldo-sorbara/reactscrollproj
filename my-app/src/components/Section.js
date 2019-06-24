@@ -77,6 +77,9 @@ class Section extends React.Component {
               }
 
               
+              {this.props.data.image.length > 0 &&
+                <img className={imageOrientation + "-position"} src={require(`img/${this.props.data.image}`)} width="900" />
+              }
  
 
             </div>
