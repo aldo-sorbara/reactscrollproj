@@ -41,7 +41,16 @@ class App extends React.Component {
       //this.setState({data: this.state.data + 1})
    }
    componentDidMount() {
-    console.log('Component DID MOUNT!')
+    console.log('Component DID MOUNT!!!!')
+
+/*
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/jquery.reel/1.3/jquery.reel.js";
+  script.async = true;
+  script.onload = () => this.scriptLoaded();
+
+  document.body.appendChild(script);
+  */
 
 
       var app  = {
@@ -227,7 +236,8 @@ var data = [{
   "align" : "left",
   "type": "vision",
   "image": "GettyImages-901670186_RET.png",
-  "svg" : "1"
+  "svg" : "1",
+  "threesixty": ""
   },{
   "title" : "Life Unlimited",
   "subtitle": "",
@@ -235,7 +245,8 @@ var data = [{
   "align" : "center",
   "type": "vision",
   "image": "",
-  "svg" : ""
+  "svg" : "",
+  "threesixty": ""
   },
   {
   "title" : "We invent technology",
@@ -244,7 +255,8 @@ var data = [{
   "align" : "left",
   "type": "work",
   "image": "",
-  "svg" : "3"
+  "svg" : "3",
+  "threesixty": "S&N_360_mobile_01/S&N_360_ipad_01_0001.png"
   },
   {
   "title" : "We reinvent medicine",
@@ -253,7 +265,8 @@ var data = [{
   "align" : "right",
   "type": "work",
   "image": "GettyImages-91156559 (1).png",
-  "svg" : "4"
+  "svg" : "4",
+  "threesixty": ""
   },
   {
   "title" : "We reboot belief",
@@ -262,7 +275,8 @@ var data = [{
   "align" : "left",
   "type": "work",
   "image": "GettyImages-925542250 (2).png",
-  "svg" : "5"
+  "svg" : "5",
+  "threesixty": ""
   },
   {
   "title" : "Built on three pillars",
@@ -271,7 +285,8 @@ var data = [{
   "align" : "right",
   "type": "culture",
   "image": "GettyImages-1062184520.png",
-  "svg" : "6"
+  "svg" : "6",
+  "threesixty": ""
   },
   {
   "title" : "Care",
@@ -280,7 +295,8 @@ var data = [{
   "align" : "left",
   "type": "culture",
   "image": "GettyImages-860697758.png",
-  "svg" : "7"
+  "svg" : "7",
+  "threesixty": ""
   },
   {
   "title" : "Courage",
@@ -289,7 +305,8 @@ var data = [{
   "align" : "right",
   "type": "culture",
   "image": "GettyImages-594201133_CUTOUT_ch.png",
-  "svg" : "8"
+  "svg" : "8",
+  "threesixty": ""
   },
   {
   "title" : "Collaboration",
@@ -298,7 +315,8 @@ var data = [{
   "align" : "left",
   "type": "culture",
   "image": "",
-  "svg" : ""
+  "svg" : "",
+  "threesixty": ""
   },
   {
   "title" : "Smith+Nephew",
@@ -307,7 +325,8 @@ var data = [{
   "align" : "center",
   "type": "brand",
   "image": "",
-  "svg" : ""
+  "svg" : "",
+  "threesixty": ""
   }
 ]
 
