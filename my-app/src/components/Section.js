@@ -40,6 +40,12 @@ class Section extends React.Component {
 
                   <img className={imageOrientation + "-position"} src={require('img/GettyImages-860697758.png')} width="900" />
               {this.props.data.image}
+
+
+
+               {this.props.data.image.length > 0 &&
+                <img className={imageOrientation + "-position"} src={require(`img/${this.props.data.image}`)} width="900" />
+                   }
               
           */}
 
@@ -70,9 +76,8 @@ class Section extends React.Component {
                 </div>
               }
 
-              {this.props.data.image.length > 0 &&
-                <img className={imageOrientation + "-position"} src={require(`img/${this.props.data.image}`)} width="900" />
-              }
+              
+ 
 
             </div>
           </div>
