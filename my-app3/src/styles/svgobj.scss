@@ -1,0 +1,72 @@
+.svg-obj{
+    .svg-wrapper{
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      border: 1px solid blue;
+
+      &.snap-top{
+        top:0;
+      }
+      &.snap-bottom{
+        bottom:0;
+      }
+
+      &.scapula{
+        bottom: -15%;
+        right: -4%;
+      }
+
+
+      &.femur{
+        top: -64%;
+        right: -17%;
+      }
+      &.fibula-tibia{
+        bottom: -58%;
+        right: -17%;
+      }
+
+      &.rhomboid{
+        bottom: -40%;
+        right: -2%;
+      }
+
+
+      &.stern {
+        bottom: -26%;
+        left: -5%;
+      }
+
+
+
+      &.deltoid {
+        left: -8%;
+      }
+
+
+      &.latissimus-dorsi {
+        right: 15%;
+      }
+      &.back-leg {
+        right: -17%;
+      }
+
+
+      &.spine-yellow{
+        bottom: -77%;
+        left: -3%;
+      }
+      &.spine-salmon{
+        bottom: -71%;
+        left: 24%;
+      }
+      &.spine-pink{
+        bottom: -79%;
+        left: 46%;
+      }
+    }
+
+}
+
+

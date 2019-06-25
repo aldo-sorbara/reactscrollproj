@@ -1,0 +1,53 @@
+
+.brand-logo {
+  position: absolute;
+  top: 50%;    
+  width: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+
+  .nephew,
+  .smith{
+    height: auto;
+    position: relative;
+  }
+
+  .plus{
+    left: 50%;
+    height: 150px;
+    position: relative;
+    opacity: 0;
+    transition: all 1500ms ease-in;
+
+    &.js-plus-animate {
+      height: 30px;
+      opacity: 1;
+      left: 265px;
+    }
+  }
+
+  .smith{
+    width:200px;
+    left:20px;
+    opacity: 0;
+    transition: all 1200ms ease-in;
+
+    &.js-smith-animate {
+      animation: slideRight 1250ms linear;
+      opacity: 1;
+    }
+  }
+
+  .nephew {
+    width: 300px;
+    top: 18px;
+    left:44px;
+    opacity: 0;
+    transition: all 1200ms ease-in;
+
+    &.js-nephew-animate {
+      animation: slideLeft 1250ms linear;
+      opacity: 1;
+    }
+  }
+}
