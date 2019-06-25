@@ -3,8 +3,9 @@ import React from 'react';
 import $ from 'jquery';
 import anime from 'animejs';
 
+//import threeSixty from './libs/jquery.threesixty.js'
+//import threeSixty from 'threesixtyjs';
 import './App.scss';
-
 
 import Section from './components/Section';
 
@@ -60,7 +61,7 @@ class App extends React.Component {
           this.menuNav();
           //this.imageAnimations();
           this.svgShapeMorph();
-          //this.threeSixty();
+          this.augmentedReality();
         },
         imageAnimations: function(){
 
@@ -125,7 +126,110 @@ class App extends React.Component {
           });
 
         },
-        threeSixty: function(){
+        augmentedReality: function(){
+
+
+
+            var reel = {
+              init: function(el, startFrame, totalFrames, path){
+
+                  console.log("function time", el);
+
+                  this.el = el;
+                  this.totalFrames = totalFrames;
+                  this.frame = startFrame;
+                  this.path = path;
+              },
+              setImage: function(frame){
+
+                if(frame < 10){
+                  frame = "0"+frame;
+                }
+
+                var pathx = 'S&N_360_mobile_01/S&N_360_ipad_01_00'+frame+'.png';
+
+                // Require context image folder
+                
+                const images = require(`img/${pathx}`)
+                //const images = requirecontext(pathx, true);
+                console.log(images)
+
+                //$(this.el).attr("src", images);
+
+                $(this.el).attr("src", images);
+                
+
+              },
+              next: function(){
+                this.frame++;
+
+                if(this.frame > this.totalFrames){
+                  this.frame = 1;
+                }
+
+                reel.setImage(this.frame);
+                console.log("frame", this.frame);
+              },  
+              prev: function(){
+                this.frame--;
+
+                if(this.frame < 1){
+                  this.frame = this.totalFrames;
+                }
+
+                console.log("frame", this.frame);
+                reel.setImage(this.frame);
+
+              }
+            }
+
+            reel.init($('.threesixty'), 0, 40, 'S&N_360_mobile_01/S&N_360_ipad_01_####.png')
+
+
+
+
+
+          /*
+        $('.threesixty').reel({
+          //indicator:   5, // For no indicator just remove this line
+          frames:      32,
+          frame:       1,
+          rows:       16,
+          row:         1,
+          brake:    0.23,
+          wheelable: true,
+          //speed:       0.3,
+          images:      'S&N_360_mobile_01/S&N_360_ipad_01_####.png',
+        });
+        */
+
+          /*
+          var $three = $('.threesixty').threeSixty({
+            dragDirection: 'horizontal'
+          });
+
+          console.log("$three", $three)
+
+          */
+
+          
+          var position = $(window).scrollTop();
+          // should start at 0
+
+          $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll > position) {
+              console.log('scrollDown');
+              reel.next();
+            } else {
+              console.log('scrollUp');
+              reel.prev();
+            }
+            position = scroll;
+          });
+        
+
+
           //scrolll reel
           /*
                   $('#image').reel({
@@ -141,6 +245,24 @@ class App extends React.Component {
                   });
           */
 
+
+/*
+          var container = document.querySelector('.threesixty');
+
+          var images = [
+            'S&N_360_mobile_01/S&N_360_ipad_01_0001.png',
+            'S&N_360_mobile_01/S&N_360_ipad_01_0002.png'
+          ]
+
+         var slider = threesixty(container, images, {
+            interactive: true,
+            currentImage: 0
+          });
+          slider.init()
+*/
+
+
+          /*
           $('#image').reel({
             images:      'S&N_360_mobile_01_compact/S&N_360_ipad_01_####.png',
             speed: 0,
@@ -148,8 +270,9 @@ class App extends React.Component {
             cw: true,
             throwable: 1.2
           });
+          */
 
-
+          /*
           var position = $(window).scrollTop();
           // should start at 0
 
@@ -157,15 +280,16 @@ class App extends React.Component {
             var scroll = $(window).scrollTop();
             if (scroll > position) {
               console.log('scrollDown');
-              $('#image')
-                .trigger('stepRight');
+              $('.threesixty')
+                .trigger('next');
             } else {
               console.log('scrollUp');
-              $('#image')
-                .trigger('stepLeft');
+              $('.threesixty')
+                .trigger('previous');
             }
             position = scroll;
           });
+          */
 
         },
         svgShapeMorph: function(){

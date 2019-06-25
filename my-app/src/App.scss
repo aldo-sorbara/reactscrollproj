@@ -264,3 +264,18 @@
   }
 }
 
+
+
+
+      .threesixty {
+        cursor: grab;
+        cursor: -webkit-grab;
+        width: 572px;
+        height: 342px;
+        border: 1px dashed #DDD;
+      }
+
+      .threesixty--grabbing {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+      }
