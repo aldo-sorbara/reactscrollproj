@@ -92,11 +92,11 @@ class Section extends React.Component {
             }
           
             {this.props.data.image.length > 0 &&
-              <img className={imageOrientation + "-position " + this.props.data.type + this.props.index} src={`img/${this.props.data.image}`} width="900" />
+              <img className={imageOrientation + "-position " + this.props.data.type + this.props.index} src={require(`./../img/${this.props.data.image}`)} width="900" />
             }
 
             {this.props.data.threesixty.length > 0 &&
-              <img className={"threesixty " + imageOrientation + "-position"} src={`img/${this.props.data.threesixty}`} data-count="61" />
+              <img className={"threesixty " + imageOrientation + "-position"} src={require(`./../img/${this.props.data.threesixty}`)} data-count="61" />
             }
 
           </div>
@@ -109,9 +109,9 @@ class Section extends React.Component {
 
           {this.props.data.type === 'brand' &&
             <div className="brand-logo">
-              <img className="plus" src={`logo/S&N_Plus.svg`}  />
-              <img className="smith" src={`logo/S&N_Smith.svg`}  />
-              <img className="nephew" src={`logo/S&N_Nephew.svg`}  />
+              <img className="plus" src={require(`./../logo/S&N_Plus.svg`)}  />
+              <img className="smith" src={require(`./../logo/S&N_Smith.svg`)}  />
+              <img className="nephew" src={require(`./../logo/S&N_Nephew.svg`)}  />
             </div>
           }
 
