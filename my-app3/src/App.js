@@ -166,7 +166,7 @@ class App extends React.Component {
 
               //get path of image
               let pathx = this.path.replace("####", frame);
-              const images = require(`img/${pathx}`);
+              const images = `img/${pathx}`;
 
               //replace path of element
               $(this.el).attr("src", images);
